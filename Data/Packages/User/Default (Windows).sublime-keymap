@@ -1,0 +1,14 @@
+[
+	{ "keys": ["ctrl+shift+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+	{ "keys": ["ctrl+shift+y"], "command": "duplicate_line" },
+	{ "keys": ["ctrl+shift+x"], "command": "find_under_expand" },
+	{ "keys": ["ctrl+alt+f"], "command": "htmlprettify" },
+	{ "keys": ["ctrl+alt+j"], "command": "js_format" },
+	{ "keys": ["ctrl+alt+s"], "command": "sql_beautifier" },
+	{ "keys": ["ctrl+alt+left"], "command": "jump_back" }, 
+	{ "keys": ["ctrl+alt+right"], "command": "jump_forward" },
+	{ "keys": ["shift+alt+up"], "command": "select_lines", "args": {"forward": false} },
+	{ "keys": ["shift+alt+down"], "command": "select_lines", "args": {"forward": true} },
+	{ "keys": ["ctrl+shift+u"], "command": "upper_case" },
+	{ "keys": ["ctrl+shift+o"], "command": "lower_case" },
+]

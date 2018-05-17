@@ -1,0 +1,28 @@
+{
+	"bootstrapped": true,
+	"http_proxy": "http://127.0.0.1:1080",
+	"https_proxy": "http://127.0.0.1:1080",
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"All Autocomplete",
+		"ChineseLocalizations",
+		"ConvertToUTF8",
+		"Copy Relative Path",
+		"Emmet",
+		"HTML-CSS-JS Prettify",
+		"IMESupport",
+		"JsFormat",
+		"Material Theme",
+		"Package Control",
+		"SideBarEnhancements",
+		"SqlBeautifier",
+		"SublimeServer",
+		"Terminal",
+		"Text Pastry",
+		"TypeScript"
+	]
+}

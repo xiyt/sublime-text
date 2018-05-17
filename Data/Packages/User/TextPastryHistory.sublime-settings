@@ -1,0 +1,176 @@
+{
+	"history":
+	[
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "date",
+					"threshold": 3
+				},
+				"command": "text_pastry_insert_text",
+				"text": "date"
+			},
+			"key": "5fc732311905cb27e82d67f4f6511f7f",
+			"label": "date"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"start": "1",
+					"stop": "5"
+				},
+				"command": "text_pastry_range",
+				"text": "range 1 5"
+			},
+			"key": "ad20054fd028e33902212efb1921f77e",
+			"label": "range 1 5"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "dates",
+					"threshold": 3
+				},
+				"command": "text_pastry_insert_text",
+				"text": "dates"
+			},
+			"key": "7877adcb96eb8221c075f0008093bbf7",
+			"label": "dates"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": ""
+				},
+				"command": "text_pastry_date_range",
+				"text": "days"
+			},
+			"key": "44fdec47036f482b68b748f9d786801b",
+			"label": "days"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"step_size": "week",
+					"text": ""
+				},
+				"command": "text_pastry_date_range",
+				"text": "week"
+			},
+			"key": "172a8327fcd3685ab3c0f740d031da09",
+			"label": "week"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"step_size": "month",
+					"text": ""
+				},
+				"command": "text_pastry_date_range",
+				"text": "month"
+			},
+			"key": "7436f942d5ea836cb84f1bb2527d8286",
+			"label": "month"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"step_size": "year",
+					"text": ""
+				},
+				"command": "text_pastry_date_range",
+				"text": "year"
+			},
+			"key": "84cdc76cabf41bd7c961f6ab12f117d8",
+			"label": "year"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": ""
+				},
+				"command": "text_pastry_date_range",
+				"text": "day"
+			},
+			"key": "628b7db04235f228d40adc671413a8c8",
+			"label": "day"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"repeat": "5",
+					"text": ""
+				},
+				"command": "text_pastry_date_range",
+				"text": "day x5"
+			},
+			"key": "aac9aa9e88d75530566585983a7e4b79",
+			"label": "day x5"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"repeat": "3",
+					"step_size": "year",
+					"text": ""
+				},
+				"command": "text_pastry_date_range",
+				"text": "year x3"
+			},
+			"key": "7c76689d6736004f4843bc96cdf5f4d4",
+			"label": "year x3"
+		},
+		{
+			"data":
+			{
+				"args": null,
+				"command": "text_pastry_uuid",
+				"text": "uuid"
+			},
+			"key": "ef7c876f00f3acddd00fa671f52d0b1f",
+			"label": "uuid"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "\\i(2,5)"
+				},
+				"command": "text_pastry_step",
+				"text": "\\i(2,5)"
+			},
+			"key": "be4158714cc5963e15ec3ad97b104d2d",
+			"label": "\\i(2,5)"
+		}
+	],
+	"last_command":
+	{
+		"args":
+		{
+			"text": "\\i(2,5)"
+		},
+		"command": "text_pastry_step",
+		"text": "\\i(2,5)"
+	}
+}
