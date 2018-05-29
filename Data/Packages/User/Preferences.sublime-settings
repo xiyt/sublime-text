@@ -1,7 +1,7 @@
 {
 	"always_prompt_for_file_reload": true,
 	"caret_extra_width": 1,
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Palenight.tmTheme",
 	"font_size": 15,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
@@ -9,10 +9,11 @@
 	[
 		"Vintage"
 	],
+	"material_theme_small_tab": true,
 	"set_unsaved_view_name": false,
 	"show_encoding": true,
 	"tab_size": 2,
-	"theme": "Material-Theme-Darker.sublime-theme",
+	"theme": "Material-Theme-Palenight.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"update_check": false,
 	"word_wrap": false
