@@ -95,20 +95,28 @@ def active_window():
     """Return currently active window"""
     return sublime.active_window()
 
+def selector_matches_whole_file(view, selector):
+    regions = view.find_by_selector(selector)
+    return len(regions) == 1 and regions[0].size() == view.size()
 
 def is_typescript(view):
     """Test if the outer syntactic scope is 'source.ts' or 'source.tsx' """
     if not view.file_name():
         return False
 
-    try:
-        location = view.sel()[0].begin()
-    except:
-        return False
+    # Check if the *entire file* is one contiguous TypeScript/JavaScript region.
+    #
+    # Why am I writing this note? We used to test for the *current selection*.
+    # This meant that as soon as a user clicked into an html `<script>` tag,
+    # (whose scope was something like source.js), then this function
+    # would suddenly return True. The entire file would then be
+    # treated as a `.ts` or `.js` file and the user would be given red squiggles!
+    # Clearly we shouldn't try to parse a `.html` file as TypeScript.
+    is_ts_file = selector_matches_whole_file(view, "source.ts, source.tsx")
+    is_js_file = cli.enable_language_service_for_js \
+        and selector_matches_whole_file(view, "source.js, source.jsx")
 
-    return (view.match_selector(location, 'source.ts') or
-            view.match_selector(location, 'source.tsx'))
-
+    return is_ts_file or is_js_file
 
 def is_special_view(view):
     """Determine if the current view is a special view.
@@ -123,16 +131,19 @@ def is_special_view(view):
 
 
 def get_location_from_view(view):
-    """Returns the Location tuple of the beginning of the first selected region in the view"""
+    """Returns a Location representing the beginning of the first selected region in the view"""
     region = view.sel()[0]
     return get_location_from_region(view, region)
-
 
 def get_location_from_region(view, region):
     """Returns the Location tuple of the beginning of the given region"""
     position = region.begin()
     return get_location_from_position(view, position)
 
+def get_start_and_end_from_view(view):
+    """Returns a tuple of Location objects representing the (start, end) of a region."""
+    region = view.sel()[0]
+    return map(lambda p: get_location_from_position(view, p), (region.begin(), region.end()))
 
 def get_location_from_position(view, position):
     """Returns the LineOffset object of the given text position"""

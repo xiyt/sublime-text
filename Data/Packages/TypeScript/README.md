@@ -19,7 +19,7 @@ This plugin can be configured to load an alternate version of TypeScript.
 This is typically useful for trying out nightly builds, or prototyping with custom builds.
 To do that, update the `Settings - User` file with the following:
 
-```json
+```json5
 "typescript_tsdk": "<path to your folder>/node_modules/typescript/lib"
 ```
 
@@ -85,9 +85,8 @@ The below features are available via the keyboard shortcuts shown, or via the Co
 |Build		        | (Win)`^B` or `F7`, (OSX) `⌘B` or `F7`   |
 |Error list             | (via Command Palette) |
 
-The "format on key" feature is on by default, which formats the current line after typing `;`, `}` or `enter`.
-To disable it, go to `Preferences` -> `Package Settings` -> `TypeScript` -> `Plugin Settings - User`, and add
-`"typescript_auto_format": false` to the json file.
+The "format on key" feature is disabled by default, which formats the current line after typing `;`, `}` or `enter`.
+To enable it, go to `Preferences` -> `Package Settings` -> `TypeScript` -> `Plugin Settings - User`, and add `"typescript_auto_format": true` to the json file.
 
 For further information about the keyboard shortcuts, please refer to the [`Default.sublime-keymap`](https://github.com/Microsoft/TypeScript-Sublime-Plugin/blob/master/Default.sublime-keymap) file for common shortcuts and
 [`Default (OSX).sublime-keymap`](https://github.com/Microsoft/TypeScript-Sublime-Plugin/blob/master/Default%20(OSX).sublime-keymap),
@@ -95,13 +94,22 @@ For further information about the keyboard shortcuts, please refer to the [`Defa
 [`Default (Linux).sublime-keymap`](https://github.com/Microsoft/TypeScript-Sublime-Plugin/blob/master/Default%20(Linux).sublime-keymap)
 for OS-specific shortcuts.
 
+#### Other settings
+
+These settings can be overridden in `Packages/User/TypeScript.sublime-settings`, which you can open by going to `Preferences` -> `Package Settings` -> `TypeScript` -> `TypeScript Settings - User`.
+
+- `error_color`: the color of the lines drawn underneath/around type errors; either an empty string for the default color, or one of `"region.redish"`, `"region.orangish"`, `"region.yellowish"`, `"region.greenish"`, `"region.bluish"`, `"region.purplish"`, `"region.pinkish"`
+- `error_icon`: specifies a gutter icon, defaults to nothing can be set to `"dot"`, `"circle"`, `"bookmark"` or any other value accepted by Sublime Text
+- `error_outlined`: will draw type errors with a solid outline instead of the default which is a squiggly line underneath
+- `quick_info_popup_max_width`: the max width of the quick info popup, default 1024
+
 Project System
 ------
 The plugin supports two kinds of projects:
 
 #### Inferred project
 
-For loose TS files opened in Sublime, the plugin will create an inferred project and include every files that the current file refers to.
+For loose TS files opened in Sublime, the plugin will create an inferred project and include every file that the current file refers to.
 
 #### Configured project
 

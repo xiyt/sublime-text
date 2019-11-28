@@ -7,6 +7,10 @@ from .quick_info import TypescriptQuickInfo, TypescriptQuickInfoDoc
 from .save import TypescriptSave
 from .show_doc import TypescriptShowDoc
 from .signature import TypescriptSignaturePanel, TypescriptSignaturePopup
+from .get_code_fixes import (
+    TypescriptRequestCodeFixesCommand,
+    ReplaceTextCommand
+)
 from .format import (
     TypescriptFormatBrackets,
     TypescriptFormatDocument,
@@ -28,11 +32,18 @@ from .rename import (
     TypescriptFinishRenameCommand,
     TypescriptRenameCommand
 )
+from .refactor import (
+    TypescriptGetApplicableRefactorsCommand,
+    TypescriptApplyRefactorCommand
+)
 from .build import TypescriptBuildCommand
 from .settings import (
     TypescriptOpenPluginDefaultSettingFile,
     TypescriptOpenTsDefaultSettingFile,
     TypescriptOpenTsreactDefaultSettingFile
+)
+from .organize_imports import (
+    TypescriptOrganizeImportsCommand
 )
 
 __all__ = [
@@ -40,6 +51,8 @@ __all__ = [
     "TypescriptProjectErrorList",
     "TypescriptGoToError",
     "TypescriptFormatBrackets",
+    "TypescriptRequestCodeFixesCommand",
+    "ReplaceTextCommand",
     "TypescriptFormatDocument",
     "TypescriptFormatLine",
     "TypescriptFormatOnKey",
@@ -59,6 +72,9 @@ __all__ = [
     "TypescriptDelayedRenameFile",
     "TypescriptFinishRenameCommand",
     "TypescriptRenameCommand",
+    "TypescriptOrganizeImportsCommand",
+    "TypescriptGetApplicableRefactorsCommand",
+    "TypescriptApplyRefactorCommand",
     "TypescriptSave",
     "TypescriptShowDoc",
     "TypescriptSignaturePanel",
