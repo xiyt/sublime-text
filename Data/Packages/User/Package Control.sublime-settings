@@ -4,11 +4,14 @@
 	"https_proxy": "http://127.0.0.1:1080",
 	"in_process_packages":
 	[
+		"0_package_control_loader",
+		"Material Theme"
 	],
 	"installed_packages":
 	[
 		"A File Icon",
 		"All Autocomplete",
+		"ayu",
 		"ChineseLocalizations",
 		"ConvertToUTF8",
 		"Copy Relative Path",
@@ -17,7 +20,6 @@
 		"IMESupport",
 		"JavaPropertiesEditor",
 		"JsFormat",
-		"Material Theme",
 		"Package Control",
 		"SideBarEnhancements",
 		"SqlBeautifier",
